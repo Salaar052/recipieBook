@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { recipes } from "@/data/Recipies";
 
 export default function Home() {

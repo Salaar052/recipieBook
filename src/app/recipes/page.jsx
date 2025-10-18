@@ -18,12 +18,16 @@ export default function RecipesPage() {
     return colors[category] || "bg-gray-200 text-gray-800";
   };
 
-  const truncateDescription = (text, wordLimit = 20) => {
-    const words = text.split(" ");
-    return words.length > wordLimit
-      ? words.slice(0, wordLimit).join(" ") + "..."
-      : text;
-  };
+const truncateDescription = (text, wordLimit = 20) => {
+  if (!text) return "";
+  // Remove any HTML tags and extra whitespace
+  const cleanText = text.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+  const words = cleanText.split(" ");
+  return words.length > wordLimit
+    ? words.slice(0, wordLimit).join(" ") + "..."
+    : cleanText;
+};
+
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -51,10 +55,14 @@ export default function RecipesPage() {
               </div>
 
               <div className="p-4 flex flex-col flex-grow">
-                <h3 className="text-lg font-bold mb-2">{recipe.title}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 flex-grow">
-                  {truncateDescription(recipe.description)}
-                </p>
+                <h3 className="text-lg font-bold mb-2 line-clamp-2 min-h-[3.5rem]">
+  {recipe.title}
+</h3>
+
+                <p className="text-sm text-gray-600 dark:text-gray-400 flex-grow text-justify leading-relaxed">
+  {truncateDescription(recipe.description)}
+</p>
+
               </div>
             </div>
           </Link>
