@@ -28,7 +28,6 @@ export default async function RecipeDetail({ params }) {
   }
 
   return (
-    
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <BackButton />
       <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-2">
@@ -47,6 +46,7 @@ export default async function RecipeDetail({ params }) {
         />
       </div>
 
+      {/* Ingredients */}
       <div className="mb-6">
         <h2 className="text-2xl font-bold mb-4">Ingredients</h2>
         <ul className="list-disc list-inside space-y-2 text-text-light dark:text-text-dark">
@@ -56,6 +56,7 @@ export default async function RecipeDetail({ params }) {
         </ul>
       </div>
 
+      {/* Instructions */}
       {recipe.instructions?.length > 0 && (
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-4">Instructions</h2>
@@ -67,6 +68,19 @@ export default async function RecipeDetail({ params }) {
         </div>
       )}
 
+      {/* ✅ Tips Section */}
+      {recipe.tips?.length > 0 && (
+        <div className="mb-8 bg-surface-light/50 dark:bg-surface-dark/30 rounded-xl p-6 shadow-sm">
+          <h2 className="text-2xl font-bold mb-4">Tips</h2>
+          <ul className="list-disc list-inside space-y-3 text-text-light dark:text-text-dark">
+            {recipe.tips.map((tip, index) => (
+              <li key={index}>{tip}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Footer Info */}
       <div className="flex flex-wrap items-center gap-6 border-t border-surface-light dark:border-surface-dark pt-8 mt-8">
         <div className="flex gap-3">
           <div className="flex items-center gap-x-2">
