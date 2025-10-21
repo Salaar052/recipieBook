@@ -1,36 +1,5 @@
 export const recipes = [
-  {
-    id: 1,
-    title: "Spicy Thai Green Curry",
-    category: "Dinner",
-    time: "45 mins",
-    servings: 4,
-    image: "https://images.unsplash.com/photo-1570197788417-0e82375c9371?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2a3b4c5d6e7f8g9h0i1j2k3l4m5n6o7p",
-    description:
-      "This spicy Thai green curry is a beautiful balance of heat, creaminess, and aroma. It’s made with coconut milk, fresh Thai basil, lime leaves, and green curry paste that together create a comforting yet bold dish. The flavor develops with every bite, with just the right kick of chili that warms the soul. The combination of fresh herbs and spices makes it an incredibly rich and authentic Thai experience. Whether you’re making it for a cozy dinner or a family gathering, this curry is a showstopper. The coconut milk adds creaminess, while the basil gives it a fresh, herbal finish. Serve it with jasmine rice for a truly satisfying meal.",
-    shortDesc:
-      "An authentic Thai curry bursting with flavor, spice, and the freshness of coconut milk and basil.",
-    ingredients: [
-      "2 tbsp green curry paste",
-      "1 can (13.5 oz) coconut milk",
-      "1 lb chicken breast, sliced",
-      "1 cup bamboo shoots",
-      "1 red bell pepper, sliced",
-      "1/2 cup Thai basil leaves",
-      "1 tbsp fish sauce",
-      "1 tsp sugar",
-      "2 kaffir lime leaves",
-      "Steamed jasmine rice"
-    ],
-    instructions: [
-      "Heat the thick part of the coconut milk in a skillet until it bubbles.",
-      "Add curry paste and stir until fragrant.",
-      "Add chicken and cook until no longer pink.",
-      "Add remaining coconut milk, fish sauce, and sugar.",
-      "Stir in vegetables and cook until tender.",
-      "Add basil and lime leaves, then serve hot with rice."
-    ]
-  },
+ 
   
   {
   "id": 2,
